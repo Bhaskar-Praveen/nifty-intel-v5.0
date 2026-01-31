@@ -1,0 +1,22 @@
+name: V5_Production_Check
+on: [push]
+
+jobs:
+  test_and_lint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+
+      - name: Install Dependencies
+        run: |
+          pip install pytest pyyaml pandas
+          
+      - name: Run Safety Tests
+        run: |
+          pytest tests/
