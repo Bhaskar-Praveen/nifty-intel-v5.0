@@ -1,0 +1,4 @@
+.env
+data/master_data.csv
+logs/
+__pycache__/
