@@ -1,4 +1,9 @@
+# Terraform
+.terraform/
+terraform.tfstate
+terraform.tfstate.*
+*.tfvars
+*.auto.tfvars
+
+# Env
 .env
-data/master_data.csv
-logs/
-__pycache__/
